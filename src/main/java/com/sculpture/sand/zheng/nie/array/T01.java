@@ -1,5 +1,8 @@
 package com.sculpture.sand.zheng.nie.array;
 
+
+import org.junit.Test;
+
 /**
  * @author: niezheng1
  * @Date: 2019/6/27 11:31
@@ -9,6 +12,11 @@ package com.sculpture.sand.zheng.nie.array;
  */
 public class T01 {
 
+    /**
+     * 时间复杂度O(n^2)
+     * @param a
+     * @return
+     */
     public int[] multiply(int[] a) {
         if(a == null){
             return a;
@@ -27,5 +35,16 @@ public class T01 {
 
 
 
+    }
+
+    @Test
+    public void test1 (int[] a){
+        int length = a.length;
+        int[] b = new int[length];
+        b[0] = 1; //属于下三角计算
+        //下三角计算，从b1 开始计算
+        for (int i= 0;i<length;i++){
+            b[i] = b[i]*a[i];
+        }
     }
 }
