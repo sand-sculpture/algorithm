@@ -15,7 +15,7 @@ public class T01 {
         }
         int[] b = new int[a.length];
         for(int j=0;j<a.length;j++){
-            int sum = 0;
+            int sum = 1;
             for (int i=0;i<a.length;i++){
                 if(j != i){
                     sum = sum*a[i];
