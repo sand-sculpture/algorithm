@@ -34,4 +34,29 @@ public class FindGreatestSumOfSubArray {
         return res;
     }
 
+
+    /**
+     *  total 和0进行比较 如果小于0 不利于求和 直接舍弃
+     * @param array
+     * @return
+     */
+    public int test2(int[] array){
+        if(null == array){
+            return 0;
+        }
+        int max = array[0];
+        int total = array[0];
+        for (int i = 1;i<array.length;i++){
+            if(total >0){
+                total += array[i];
+            }else {
+                total = array[i];
+            }
+            if(total > max){
+                max = total;
+            }
+        }
+        return max;
+    }
+
 }
