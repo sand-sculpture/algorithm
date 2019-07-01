@@ -37,6 +37,7 @@ public class FindGreatestSumOfSubArray {
 
     /**
      *  total 和0进行比较 如果小于0 不利于求和 直接舍弃
+     *  total 每次和max进行比较 保证max是最大值
      * @param array
      * @return
      */
