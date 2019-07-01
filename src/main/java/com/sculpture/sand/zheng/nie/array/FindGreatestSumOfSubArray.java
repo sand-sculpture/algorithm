@@ -12,9 +12,26 @@ package com.sculpture.sand.zheng.nie.array;
  */
 public class FindGreatestSumOfSubArray {
 
-
-    public void test1(int[] array){
-
+    /**
+     * 动态规划
+     *  思路：
+     *     F（i）=max（F（i-1）+array[i] ， array[i]）
+     *     F(i) 必定是连续的数组和
+     * @param array
+     */
+    public int test1(int[] array){
+        if( null == array){
+            return 0;
+        }
+        int max = array[0];
+        int res = array[0];
+        for (int i = 1;i<array.length;i++){
+            //连续数组的最大值
+            max = Math.max(max+array[i],array[i]);
+            //每次选出最大值
+            res = Math.max(max,res);
+        }
+        return res;
     }
 
 }
