@@ -40,4 +40,30 @@ public class Duplicate {
         return false;
     }
 
+    /**
+     * 解法2
+     *        用数组的值求余length
+     *        然后标记
+     *        如果有求余之后相等的 必定在0-n之间有重复数字
+     * @param numbers
+     * @param length
+     * @param duplication
+     * @return
+     */
+    public boolean duplicate1(int numbers[],int length,int [] duplication) {
+        if(null == numbers || length == 0){
+            return false;
+        }
+        for (int i=0;i<numbers.length;i++){
+            int index = numbers[i] % length;
+            if(numbers[index] >length){
+                duplication[0] = numbers[index] -length;
+                return true;
+            }
+            numbers[index] +=length;
+        }
+        return false;
+    }
+
+
 }
