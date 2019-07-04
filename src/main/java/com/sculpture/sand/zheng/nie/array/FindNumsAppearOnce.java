@@ -17,7 +17,11 @@ import org.junit.Test;
  * 将num1[0],num2[0]设置为返回结果
  * [1,2,4,5,6,7,5,1,2,6]
  * <p>
- * 思路： 异或
+ * 思路：
+ *      1.数组里面的所有数异或的结果等于 两个不相等数的异或结果；
+ *      2.根据异或结果求出从低位开始bit位为1的下标数
+ *      3.根据下标数可以将数组分割开，其中两个不相等的数必定会被分割为两个数组里面
+ *      4.根据分割的结果继续异或就能分别求出两个不相等的数
  */
 public class FindNumsAppearOnce {
 
@@ -43,7 +47,6 @@ public class FindNumsAppearOnce {
          * 4 : 0100
          * 6 : 0110
          * 4^6 = 0010; =2
-         * 7 : 0111;
          */
         int result = 0;
         for (int i = 0; i < array.length; i++) {
