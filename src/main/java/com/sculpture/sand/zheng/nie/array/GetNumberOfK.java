@@ -18,6 +18,12 @@ public class GetNumberOfK {
     }
 
 
+    /**
+     * 获取高位下标
+     * @param array
+     * @param k
+     * @return
+     */
     private int getHighIndex(int [] array,int k ){
         int low = 0;
         int high = array.length -1;
@@ -29,13 +35,39 @@ public class GetNumberOfK {
                 high = mid-1;
             }else {
                 //需要查询出k的最小下标数
-                
+                if(array[mid+1] != k){
+                    return mid;
+                }else {
+                    low = mid+1;
+                }
             }
         }
         return 0;
     }
 
+    /**
+     * 查询最低下标数组
+     * @param array
+     * @param k
+     * @return
+     */
     private int getLowIndex(int[] array,int k){
+        int high = array.length;
+        int low = 0;
+        while (low <= high){
+            int mid = (high + low)/2;
+            if(array[mid] > k){
+                high = mid-1;
+            }else if(array[mid] < k){
+                low = mid+1;
+            }else {
+                if(array[mid-1] != k){
+                    return mid;
+                }else {
+                    high = mid-1;
+                }
+            }
+        }
         return 0;
     }
 
