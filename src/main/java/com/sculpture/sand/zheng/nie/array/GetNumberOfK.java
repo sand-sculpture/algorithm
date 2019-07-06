@@ -19,6 +19,19 @@ public class GetNumberOfK {
 
 
     private int getHighIndex(int [] array,int k ){
+        int low = 0;
+        int high = array.length -1;
+        while (low <= high){
+            int mid = (low + high) /2;
+            if(array[mid] < k){
+                low = mid +1;
+            }else if(array[mid] > k){
+                high = mid-1;
+            }else {
+                //需要查询出k的最小下标数
+                
+            }
+        }
         return 0;
     }
 
