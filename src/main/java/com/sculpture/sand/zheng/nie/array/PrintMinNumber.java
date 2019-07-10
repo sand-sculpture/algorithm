@@ -1,5 +1,7 @@
 package com.sculpture.sand.zheng.nie.array;
 
+import org.junit.Test;
+
 /**
  * @author: niezheng1
  * @Date: 2019/7/9 9:09
@@ -10,8 +12,10 @@ package com.sculpture.sand.zheng.nie.array;
 public class PrintMinNumber {
 
 
+    @Test
     public void PrintMinNumber( ) {
         int [] numbers = new int[]{2,3,4,5,555};
+
     }
 
 }
