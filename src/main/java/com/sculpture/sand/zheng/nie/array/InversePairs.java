@@ -24,8 +24,14 @@ public class InversePairs {
         if(array == null || array.length == 0){
             return 0;
         }
+        int[] copy = new int[array.length];
+        //数组复制
+        for (int i = 0;i<array.length;i++){
+            copy[i] = array[i];
+        }
         return 0;
     }
+
 
 
     public static void main(String[] args) {
