@@ -49,11 +49,20 @@ public class InversePairs {
             //如果数组1的高位大于数组2的高位   那么逆序对的数量就是
             if(array[i] > array[j]){
                 count = count+j-mid;
-
+                copy[copyHigh--] = array[i--];
+            }else {
+                copy[copyHigh--] = array[j--];
             }
         }
 
-        return 0;
+        //mid之前的数组
+        for (;i>=low;i--){
+            copy[copyHigh--] = array[i];
+        }
+        for (;j>=low+mid+1;j--){
+            copy[copyHigh--] = array[j];
+        }
+        return leftCount+rightCount+count;
 
     }
 
