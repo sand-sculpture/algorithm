@@ -19,4 +19,19 @@ package com.sculpture.sand.zheng.nie.array;
     对于%100的数据,size<=2*10^5
  */
 public class InversePairs {
+
+    public int InversePairs(int [] array) {
+        if(array == null || array.length == 0){
+            return 0;
+        }
+        return 0;
+    }
+
+
+    public static void main(String[] args) {
+
+    }
+
+
+
 }
