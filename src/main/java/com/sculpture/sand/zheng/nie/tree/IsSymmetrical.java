@@ -8,4 +8,10 @@ package com.sculpture.sand.zheng.nie.tree;
  *
  */
 public class IsSymmetrical {
+
+
+    boolean isSymmetrical(TreeNode pRoot){
+        return true;
+    }
+
 }
