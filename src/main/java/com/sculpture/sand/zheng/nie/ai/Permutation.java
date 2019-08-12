@@ -1,6 +1,7 @@
 package com.sculpture.sand.zheng.nie.ai;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author: niezheng1
@@ -12,8 +13,22 @@ import java.util.ArrayList;
  */
 public class Permutation {
 
+
+    public static void main(String[] args) {
+
+    }
+
     public ArrayList<String> Permutation(String str) {
+        ArrayList<String> result = new ArrayList<>();
+        if(str == null || str.length()<=0){
+            return result;
+        }
+
         return null;
     }
 
+
+    public void PermutationHelper(char[] cs,int i,List<String> list){
+
+    }
 }
