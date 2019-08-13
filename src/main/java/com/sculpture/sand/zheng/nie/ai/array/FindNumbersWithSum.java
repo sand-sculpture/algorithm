@@ -1,4 +1,4 @@
-package com.sculpture.sand.zheng.nie.ai;
+package com.sculpture.sand.zheng.nie.ai.array;
 
 import java.util.ArrayList;
 
