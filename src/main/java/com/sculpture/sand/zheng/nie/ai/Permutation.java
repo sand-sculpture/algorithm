@@ -1,6 +1,7 @@
 package com.sculpture.sand.zheng.nie.ai;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -15,20 +16,50 @@ public class Permutation {
 
 
     public static void main(String[] args) {
-
+        Permutation p = new Permutation();
+        System.out.println(p.Permutation("abc").toString());
     }
 
     public ArrayList<String> Permutation(String str) {
-        ArrayList<String> result = new ArrayList<>();
+        ArrayList<String> res = new ArrayList<>();
         if(str == null || str.length()<=0){
-            return result;
+            return res;
         }
+        if (str != null && str.length() > 0) {
+            PermutationHelper(str.toCharArray(), 0, res);
+            Collections.sort(res);
+        }
+        return res;
+    }
 
-        return null;
+    /**
+     *
+     * @param cs           第一次      cs     i    list
+     *                              a b c    0     0
+     * @param i
+     * @param list
+     */
+    public void PermutationHelper(char[] cs, int i, List<String> list) {
+       if(i == cs.length -1){
+           String str=  String.valueOf(cs);
+           if(!list.contains(str)){
+               list.add(str);
+           }
+       }else {
+           // i : 对第一位进行固定  j : 对下一位进行固定
+           for (int j = i ;j<cs.length;j++){
+               swap(cs,i,j);
+               PermutationHelper(cs,i+1,list);
+               swap(cs,i,j);
+           }
+       }
+    }
+
+    public void swap(char[] cs, int i, int j) {
+       char temp = cs[i];
+       cs[i] = cs[j];
+       cs[j] = temp;
     }
 
 
-    public void PermutationHelper(char[] cs,int i,List<String> list){
-
-    }
 }
