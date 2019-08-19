@@ -3,6 +3,14 @@ package com.sculpture.sand.zheng.nie.ai.array;
 /**
  * @author: niezheng1
  * @Date: 2019/8/19 10:18
+ *
+ * 动态规划三个重要概念
+ *          1.最优子结构，
+ *          2.边界
+ *          3.状态转移公式
+ *
+ * 思路：每次判断当前值和前两个值之间的关系。
+ *
  */
 public class ArrayMaxNum {
 
