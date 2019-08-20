@@ -27,7 +27,8 @@ public class InversePairs {
         for (int i = 0; i < array.length; i++) {
             copy[i] = array[i];
         }
-        return 0;
+      int count =  inv(array,copy,0,array.length-1);
+        return count;
     }
 
 
@@ -37,8 +38,8 @@ public class InversePairs {
             return 0;
         }
         int mid = (low + high) >> 1;
-        int leftCount = inv(array, copy, low, mid);
-        int rightCount = inv(array, copy, mid, high);
+        int leftCount = inv(array, copy, low, mid)%1000000007;
+        int rightCount = inv(array, copy, mid+1, high)%1000000007;
         int count = 0;
         //记录分割数组1的高位
         int i = mid;
@@ -50,6 +51,9 @@ public class InversePairs {
             if(array[i] > array[j]){
                 count = count+j-mid;
                 copy[copyHigh--] = array[i--];
+                if(count>=1000000007){
+                    count%=1000000007;
+                }
             }else {
                 copy[copyHigh--] = array[j--];
             }
@@ -62,7 +66,11 @@ public class InversePairs {
         for (;j>=low+mid+1;j--){
             copy[copyHigh--] = array[j];
         }
-        return leftCount+rightCount+count;
+        //排序
+        for(int m=low; m<=high; m++) {
+            array[m] = copy[m];
+        }
+        return (leftCount+rightCount+count)%1000000007;
 
     }
 
