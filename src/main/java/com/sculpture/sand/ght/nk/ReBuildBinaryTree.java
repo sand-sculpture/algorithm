@@ -1,8 +1,4 @@
-package com.sculpture.sand.ght;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package com.sculpture.sand.ght.nk;
 
 /**
  * @description: 重建二叉树

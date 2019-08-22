@@ -1,4 +1,4 @@
-package com.sculpture.sand.ght;
+package com.sculpture.sand.ght.nk;
 
 /**
  * @description: 对称二叉树

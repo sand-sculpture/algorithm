@@ -1,7 +1,6 @@
-package com.sculpture.sand.ght;
+package com.sculpture.sand.ght.nk;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * @description: 调整数组顺序使奇数位于偶数前面

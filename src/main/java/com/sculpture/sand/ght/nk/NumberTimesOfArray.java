@@ -1,4 +1,4 @@
-package com.sculpture.sand.ght;
+package com.sculpture.sand.ght.nk;
 
 /**
  * @description: 数字在排序数组中出现的次数

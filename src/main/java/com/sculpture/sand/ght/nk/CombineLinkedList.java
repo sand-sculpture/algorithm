@@ -1,4 +1,4 @@
-package com.sculpture.sand.ght;
+package com.sculpture.sand.ght.nk;
 
 /**
  * @description: 合并两个排序的链表
