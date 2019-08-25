@@ -20,6 +20,28 @@ public class TwoSum {
     }
 
     /**
+     * 思路  每次使用HashMap 将数组里面的值和下标进行记录 对目标数减去当前数组值 然后再map中进行查找
+     *      如果能找到另外一个数 则返回数组下标
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum1(int[] nums, int target) {
+        if(nums == null || nums.length <2){
+            return nums;
+        }
+        HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
+        for(int i = 0;i<nums.length;i++){
+           int other = target - nums[i];
+           if(map.containsKey(other)){
+               return new int[]{map.get(other),i};
+           }
+           map.put(nums[i],i);
+        }
+        return null;
+    }
+
+    /**
      * 时间复杂度O(n2) 空间复杂度O(1)
      * @param nums
      * @param target
