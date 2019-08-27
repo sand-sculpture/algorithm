@@ -8,7 +8,8 @@ import java.util.Queue;
 /**
  * @author: niezheng1
  * @Date: 2019/8/27 11:36
- * 题目：
+ * 题目：Z字形状打印二叉树
+ * 思路：使用一个标志位去记录每次打印的位置是从左往右还是从右往左
  */
 public class ZigzagLevelOrder {
 
