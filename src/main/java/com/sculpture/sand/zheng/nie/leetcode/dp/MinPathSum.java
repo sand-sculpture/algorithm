@@ -1,4 +1,4 @@
-package com.sculpture.sand.zheng.nie.dp;
+package com.sculpture.sand.zheng.nie.leetcode.dp;
 
 /**
  * @author: niezheng1
