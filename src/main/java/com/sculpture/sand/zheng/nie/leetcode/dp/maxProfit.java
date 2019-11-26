@@ -23,17 +23,40 @@ package com.sculpture.sand.zheng.nie.leetcode.dp;
  */
 public class maxProfit {
 
+    /**
+     * 暴力破解
+     * @param prices
+     * @return
+     */
     public int maxProfit(int[] prices) {
-        int[][] dp = new int[prices.length][prices.length];
         int res = 0;
         for (int  j = 0;j<prices.length;j++){
-            for (int i=0;i<prices.length;i++){
-                 int temp = prices[i]-prices[j] <0 ?0:prices[i]-prices[j];
-                res =Math.min(temp,dp[j][i]);
-                dp[j][i] = res;
+            for (int i=j+1;i<prices.length;i++){
+                 int temp = prices[i] - prices[j];
+                 if(res < temp){
+                    res = temp;
+                 }
             }
         }
         return res;
+    }
+
+
+    public int maxProfit1(int[] prices) {
+        //每次记录数组种最小的数
+        int minPrice = Integer.MAX_VALUE;
+        //记录最大利润
+        int maxProfit = 0;
+        for (int i =0;i<prices.length;i++){
+            if(prices[i] < minPrice){
+                // 每次记录最小值之后 再在后面的数中找高点
+                minPrice = prices[i];
+                //判断当前值和最小值
+            }else if(prices[i]-minPrice > maxProfit){
+                maxProfit = prices[i] -minPrice;
+            }
+        }
+        return maxProfit;
     }
 
 }
